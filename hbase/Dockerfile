@@ -84,8 +84,8 @@ RUN bash -c ' \
 VOLUME /hbase-data
 
 COPY --from=harisekhon/hbase:2.1 /entrypoint.sh /
-COPY conf/hbase-site.xml /hbase/conf/
-COPY profile.d/java.sh /etc/profile.d/
+COPY --from=harisekhon/hbase:2.1 /hbase/conf/hbase-site.xml /hbase/conf/
+COPY --from=harisekhon/hbase:2.1 /etc/profile.d/java.sh /etc/profile.d/
 
 # Stargate  8080  / 8085
 # Thrift    9090  / 9095
