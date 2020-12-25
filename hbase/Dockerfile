@@ -83,7 +83,7 @@ RUN bash -c ' \
 
 VOLUME /hbase-data
 
-COPY entrypoint.sh /
+COPY ./entrypoint.sh /
 COPY conf/hbase-site.xml /hbase/conf/
 COPY profile.d/java.sh /etc/profile.d/
 
