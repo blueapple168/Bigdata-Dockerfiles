@@ -9,12 +9,12 @@
 #  If you're using my code you're welcome to connect with me on LinkedIn and optionally send me feedback
 #
 #  https://www.linkedin.com/in/harisekhon
-#
+#  https://hbase.apache.org/book.html#_configuration_files
 
 FROM harisekhon/centos-java:latest
 MAINTAINER Hari Sekhon (https://www.linkedin.com/in/harisekhon)
 
-ARG HADOOP_VERSION=3.0.0
+ARG HADOOP_VERSION=3.2.1
 
 ARG TAR=hadoop-$HADOOP_VERSION.tar.gz
 
