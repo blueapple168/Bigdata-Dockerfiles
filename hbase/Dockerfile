@@ -93,4 +93,4 @@ COPY profile.d/java.sh /etc/profile.d/
 # RS        16201 / 16301
 EXPOSE 2181 8080 8085 9090 9095 16000 16010 16030 16201 16301
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/bin/sh","-c""/entrypoint.sh"]
