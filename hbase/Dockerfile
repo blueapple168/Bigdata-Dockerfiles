@@ -26,7 +26,7 @@ LABEL Description="HBase" \
 WORKDIR /
 
 # bash - needed for entrypoint.sh
-RUN apk add --no-cache bash
+RUN apk add --no-cache bash curl net-tools
 
 # hadolint ignore=SC2039
 RUN set -eux && \
