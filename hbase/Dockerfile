@@ -83,9 +83,8 @@ RUN bash -c ' \
 
 VOLUME /hbase-data
 
-FROM harisekhon/hbase:2.1 as entrypoint
-
-COPY --from=entrypoint /entrypoint.sh /
+FROM harisekhon/hbase:2.1 as runshell
+COPY --from=runshell /entrypoint.sh /
 COPY conf/hbase-site.xml /hbase/conf/
 COPY profile.d/java.sh /etc/profile.d/
 
